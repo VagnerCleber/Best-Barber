@@ -4,7 +4,32 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-ul{
+.opcoes{
+    display: flex;
+    justify-content: space-evenly;
+    font-size:small;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.31);
+}
+
+section{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo img{
+    margin-left: 50px;
+    width: 200px;
+    height: auto;
+}
+
+/*ul{
     display: flex;
     justify-content: space-between;
     list-style-type: none;
@@ -76,4 +101,4 @@ img{
 
     width: 150px;
    
-}
+}*/
