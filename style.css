@@ -1,6 +1,12 @@
-body{
+body.claro{
     background-color: white ;
     color: black;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body.escuro{
+    background-color: black;
+    color: white;
     font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -14,6 +20,16 @@ body{
     justify-content: space-evenly;
     font-size:small;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.31);
+}
+
+.mudar-tema{
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+img[alt="tema"]{
+    width: 50px;
 }
 
 .main-section{
@@ -56,19 +72,7 @@ body{
     margin-top: 20px;
 }
 
-img[alt="c1"]{
-    border-radius: 50px;
-}
-
-img[alt="c2"]{
-    border-radius: 50px;
-}
-
-img[alt="c3"]{
-    border-radius: 50px;
-}
-
-img[alt="c4"]{
+img[alt="c"]{
     border-radius: 50px;
 }
 
@@ -89,11 +93,7 @@ img[alt="c4"]{
     justify-content: space-around;
 }
 
-img[alt="corte1"]{
-    border-radius: 50px;
-}
-
-img[alt="corte2"]{
+img[alt="corte"]{
     border-radius: 50px;
 }
 
@@ -108,11 +108,7 @@ img[alt="corte2"]{
     justify-content: space-around;
 }
 
-img[alt="barba1"]{
-    border-radius: 50px;
-}
-
-img[alt="barba2"]{
+img[alt="barba"]{
     border-radius: 50px;
 }
 
@@ -127,11 +123,7 @@ img[alt="barba2"]{
     justify-content: space-around;
 }
 
-img[alt="sob1"]{
-    border-radius: 50px;
-}
-
-img[alt="sob2"]{
+img[alt="sob"]{
     border-radius: 50px;
 }
 
@@ -151,76 +143,12 @@ img[alt="avaliacaoicon"]{
     width: 100px;
     height: auto;
 }
-/*ul{
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    align-items: center;
-    Padding: 10px;
-}
-.home{
-   color: rgb(0, 255, 0);
-   padding-left: 60px;
+
+.av{
+    padding-left: 120px;
+    padding-top: 50px;
 }
 
-.servicos{
-    padding-left: 150px;
+img[alt="estrelasimg"]{
+    width: 250px;
 }
-
-.historia{
-    padding-right: 50px;
-}
-
-h1{
-    padding-left: 150PX;
-    padding-top: 150px;
-}
-
-h2{
-    padding-left: 150px;
-    padding-top: 100px;
-
-}
-
-h3{
-    padding-left: 150px;
-}
-
-.conteudo{
-    display: flex;
-    font-size: 35px;
-    align-items: flex-end;
-}
-
-.avaliacoes{
-    display: flex;
-    flex-direction: column;
-    font-size: 30px;
-    padding-left: 150px;
-    padding-bottom: 10px;
-    margin-top: 20px;
-}
-
-.avaliacoes1{
-    display: flex;
-    flex-direction: column;
-    font-size: 30px;
-    padding-left: 150px;
-    padding-bottom: 10px;
-    margin-top: 20px;
-}
-
-.avaliacoes2{
-    display: flex;
-    flex-direction: column;
-    font-size: 30px;
-    padding-left: 150px;
-    padding-bottom: 10px;
-    margin-top: 20px;
-}
-
-img{
-
-    width: 150px;
-   
-}*/
