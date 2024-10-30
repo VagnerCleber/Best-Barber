@@ -5,6 +5,11 @@ body{
 }
 
 .opcoes{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
     display: flex;
     justify-content: space-evenly;
     font-size:small;
@@ -17,21 +22,11 @@ body{
     flex-direction: column;
 }
 
-.section-intro{
-    display: flex;
-    justify-content: center;
-    font-size: larger;
-}
-
-.fotos-intro{
-    
-}
-
 .logo{
+    margin-top: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: 20px;
     justify-content: center;
 }
 
@@ -41,6 +36,121 @@ body{
     height: auto;
 }
 
+.section-intro{
+    display: flex;
+    font-size: larger;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slogan{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.fotos-intro{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+img[alt="c1"]{
+    border-radius: 50px;
+}
+
+img[alt="c2"]{
+    border-radius: 50px;
+}
+
+img[alt="c3"]{
+    border-radius: 50px;
+}
+
+img[alt="c4"]{
+    border-radius: 50px;
+}
+
+.opc1{
+    margin-top: 150px;
+    padding-left: 120px;
+    font-size: xx-large;
+}
+
+.corte{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.cabelo-fotos{
+    display: flex;
+    justify-content: space-around;
+}
+
+img[alt="corte1"]{
+    border-radius: 50px;
+}
+
+img[alt="corte2"]{
+    border-radius: 50px;
+}
+
+.barba{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.barba-fotos{
+    display: flex;
+    justify-content: space-around;
+}
+
+img[alt="barba1"]{
+    border-radius: 50px;
+}
+
+img[alt="barba2"]{
+    border-radius: 50px;
+}
+
+.sobrancelha{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.sobrancelha-fotos{
+    display: flex;
+    justify-content: space-around;
+}
+
+img[alt="sob1"]{
+    border-radius: 50px;
+}
+
+img[alt="sob2"]{
+    border-radius: 50px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.titulo-avaliacoes{
+    margin-top: 150px;
+    padding-left: 120px;
+    font-size: x-large;
+    display: flex;
+    flex-direction: row;
+}
+
+img[alt="avaliacaoicon"]{
+    width: 100px;
+    height: auto;
+}
 /*ul{
     display: flex;
     justify-content: space-between;
