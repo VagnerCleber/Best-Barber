@@ -152,3 +152,39 @@ img[alt="avaliacaoicon"]{
 img[alt="estrelasimg"]{
     width: 250px;
 }
+
+.titulo-localizacao{
+    margin-top: 150px;
+    padding-left: 120px;
+    font-size: x-large;
+    display: flex;
+    flex-direction: row;
+}
+img[alt="localizacaoicon"]{
+    width: 100px;
+    height: auto;
+}
+.loc{
+    padding-left: 120px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+img[alt= "wppimg"]{
+    width: 100px;
+    height: auto;
+}
+.contato{
+    padding-left: 120px;
+    padding-top: 50px;
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+a:active{
+    color: blue;
+}
