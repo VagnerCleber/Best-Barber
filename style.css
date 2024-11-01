@@ -1,12 +1,12 @@
 body.claro{
-    background-color: white ;
-    color: black;
+    background-color: gray ;
+    color: white;
     font-family:Arial, Helvetica, sans-serif;
 }
 
 body.escuro{
     background-color: black;
-    color: white;
+    color: black;
     font-family:Arial, Helvetica, sans-serif;
 }
 
