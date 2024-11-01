@@ -179,6 +179,13 @@ img[alt= "wppimg"]{
     padding-left: 120px;
     padding-top: 50px;
 }
+.contato2{
+    margin-top: 150px;
+    padding-left: 120px;
+    font-size: x-large;
+    display: flex;
+    flex-direction: row;
+}
 a:link{
     color: black;
 }
@@ -187,4 +194,32 @@ a:visited{
 }
 a:active{
     color: blue;
+}
+.titulo-historia{
+    margin-top: 150px;
+    padding-left: 120px;
+    font-size: x-large;
+    display: flex;
+    flex-direction: row;
+}
+.hist{
+    padding-left: 120px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.histp2{
+    padding-left: 120px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.histp3{
+    padding-left: 120px;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
