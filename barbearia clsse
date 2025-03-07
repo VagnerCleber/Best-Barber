@@ -1,0 +1,16 @@
+import java.util.ArrayList;
+
+public class Barbearia {
+    private ArrayList<Agendamento> agendamentos = new ArrayList<>();
+
+    public void adicionarAgendamento(Agendamento agendamento) {
+        agendamentos.add(agendamento);
+        System.out.println("Agendamento adicionado com sucesso!");
+    }
+
+    public void listarAgendamentos() {
+        for (Agendamento agendamento : agendamentos) {
+            agendamento.exibirAgendamento();
+        }
+    }
+}
