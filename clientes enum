@@ -1,0 +1,18 @@
+public class Servico {
+    public enum TipoServico { CORTE, BARBA, COMPLETO }
+
+    private TipoServico tipo;
+    private double preco;
+
+    public Servico(TipoServico tipo, double preco) {
+        this.tipo = tipo;
+        this.preco = preco;
+    }
+
+    public TipoServico getTipo() { return tipo; }
+    public double getPreco() { return preco; }
+
+    public void exibirServico() {
+        System.out.println("Serviço: " + tipo + " | Preço: R$" + preco);
+    }
+}
