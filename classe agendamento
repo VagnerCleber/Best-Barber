@@ -1,0 +1,19 @@
+import java.time.LocalDateTime;
+
+public class Agendamento {
+    private Cliente cliente;
+    private Servico servico;
+    private LocalDateTime dataHora;
+
+    public Agendamento(Cliente cliente, Servico servico, LocalDateTime dataHora) {
+        this.cliente = cliente;
+        this.servico = servico;
+        this.dataHora = dataHora;
+    }
+
+    public void exibirAgendamento() {
+        System.out.println("Agendamento para " + cliente.getNome() +
+                           " | Serviço: " + servico.getTipo() +
+                           " | Data: " + dataHora);
+    }
+}
