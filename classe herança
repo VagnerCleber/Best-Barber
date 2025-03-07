@@ -1,0 +1,14 @@
+public class Funcionario implements Atendimento {
+    protected String nome;
+    protected String cargo;
+
+    public Funcionario(String nome, String cargo) {
+        this.nome = nome;
+        this.cargo = cargo;
+    }
+
+    @Override
+    public void realizarAtendimento() {
+        System.out.println(nome + " (Cargo: " + cargo + ") está atendendo um cliente.");
+    }
+}
