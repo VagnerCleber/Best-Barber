@@ -1,0 +1,178 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+// Interface Atendimento
+interface Atendimento {
+    void realizarAtendimento();
+}
+
+// Classe Funcionario
+class Funcionario implements Atendimento {
+    protected String nome;
+    protected String cargo;
+
+    public Funcionario(String nome, String cargo) {
+        this.nome = nome;
+        this.cargo = cargo;
+    }
+
+    @Override
+    public void realizarAtendimento() {
+        System.out.println(nome + " (Cargo: " + cargo + ") está atendendo um cliente.");
+    }
+}
+
+// Classe Cliente
+class Cliente {
+    private String nome;
+    private String telefone;
+
+    public Cliente() {} // Construtor padrão
+
+    public Cliente(String nome, String telefone) { // Construtor parametrizado
+        this.nome = nome;
+        this.telefone = telefone;
+    }
+
+    public Cliente(Cliente outro) { // Construtor de cópia
+        this.nome = outro.nome;
+        this.telefone = outro.telefone;
+    }
+
+    public String getNome() { return nome; }
+    public void setNome(String nome) { this.nome = nome; }
+
+    public String getTelefone() { return telefone; }
+    public void setTelefone(String telefone) { this.telefone = telefone; }
+
+    public void exibirInfo() {
+        System.out.println("Cliente: " + nome + ", Telefone: " + telefone);
+    }
+}
+
+// Classe Servico
+class Servico {
+    public enum TipoServico { CORTE, BARBA, COMPLETO }
+
+    private TipoServico tipo;
+    private double preco;
+
+    public Servico(TipoServico tipo, double preco) {
+        this.tipo = tipo;
+        this.preco = preco;
+    }
+
+    public TipoServico getTipo() { return tipo; }
+    public double getPreco() { return preco; }
+
+    public void exibirServico() {
+        System.out.println("Serviço: " + tipo + " | Preço: R$" + preco);
+    }
+
+    public static Servico escolherServico(int opcao) {
+        switch (opcao) {
+            case 1: return new Servico(TipoServico.CORTE, 50.0);
+            case 2: return new Servico(TipoServico.BARBA, 30.0);
+            case 3: return new Servico(TipoServico.COMPLETO, 70.0);
+            default: return null;
+        }
+    }
+}
+
+// Classe Agendamento
+class Agendamento {
+    private Cliente cliente;
+    private Servico servico;
+    private LocalDateTime dataHora;
+
+    public Agendamento(Cliente cliente, Servico servico, LocalDateTime dataHora) {
+        this.cliente = cliente;
+        this.servico = servico;
+        this.dataHora = dataHora;
+    }
+
+    public void exibirAgendamento() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+        String dataFormatada = dataHora.format(formatter);
+        
+        System.out.println("Agendamento para " + cliente.getNome() +
+                           " | Serviço: " + servico.getTipo() +
+                           " | Data: " + dataFormatada);
+    }
+}
+
+// Classe Barbearia
+class Barbearia {
+    private ArrayList<Agendamento> agendamentos = new ArrayList<>();
+
+    public void adicionarAgendamento(Agendamento agendamento) {
+        agendamentos.add(agendamento);
+        System.out.println("Agendamento adicionado com sucesso!");
+    }
+
+    public void listarAgendamentos() {
+        for (Agendamento agendamento : agendamentos) {
+            agendamento.exibirAgendamento();
+        }
+    }
+}
+
+// Classe Main (para testar)
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Criando a barbearia
+        Barbearia barbearia = new Barbearia();
+
+        // Interação com o usuário para criar o agendamento
+        System.out.println("Digite o nome do cliente:");
+        String nomeCliente = scanner.nextLine();
+
+        System.out.println("Digite o telefone do cliente:");
+        String telefoneCliente = scanner.nextLine();
+
+        Cliente cliente = new Cliente(nomeCliente, telefoneCliente);
+
+        // Escolha do serviço
+        System.out.println("Escolha o tipo de serviço:");
+        System.out.println("1 - Corte");
+        System.out.println("2 - Barba");
+        System.out.println("3 - Completo");
+        int opcaoServico = scanner.nextInt();
+
+        Servico servico = Servico.escolherServico(opcaoServico);
+
+        if (servico == null) {
+            System.out.println("Opção de serviço inválida.");
+            return;
+        }
+
+        // Data e hora do agendamento
+        System.out.println("Digite a data do agendamento (formato: yyyy-MM-dd):");
+        String dataStr = scanner.next();
+        System.out.println("Digite a hora do agendamento (formato: HH:mm):");
+        String horaStr = scanner.next();
+
+        // Combinando data e hora
+        String dataHoraStr = dataStr + " " + horaStr;
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+        LocalDateTime dataHora = LocalDateTime.parse(dataHoraStr, formatter);
+
+        // Criando o agendamento
+        Agendamento agendamento = new Agendamento(cliente, servico, dataHora);
+
+        // Adicionando o agendamento à barbearia
+        barbearia.adicionarAgendamento(agendamento);
+
+        // Listando os agendamentos
+        System.out.println("\nAgendamentos da Barbearia:");
+        barbearia.listarAgendamentos();
+
+        scanner.close();
+    }
+}
+
+separar o codigo em classes
